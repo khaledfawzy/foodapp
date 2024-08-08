@@ -26,6 +26,10 @@ subprojects {
     project.evaluationDependsOn(':app')
 }
 
-task clean(type: Delete) {
+tasks.register("clean", Delete) {
     delete rootProject.buildDir
+}
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
 }
